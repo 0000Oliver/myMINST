@@ -1,0 +1,27 @@
+Train:
+  batch_size: 64
+  lr: 0.001
+  weight_decay: 0.1
+  momentum: 0.9
+  optimizer_type: "SGD"
+  epochs: 200
+  steps: [20000,40000,60000]
+  lr_decay: 0.1
+  lr_decay_epochgap: 40
+Test:
+  batch_size: 16
+  show_img: False
+
+backbone: "resnet50"
+Num_Classes: 2
+Pretrained: False
+cuda: True
+num_workers: 4
+shuffle: Ture
+drop_last: False
+img_aug: True
+mean: [0.382,0.356,0.326]
+std: [0.305,0.291,0.283]
+
+train_root:  "./data/kaggle/train"
+test_root: "./data/kaggle/test"
